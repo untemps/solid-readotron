@@ -4,6 +4,6 @@
 
 ---
 
-[![npm](https://img.shields.io/npm/v/@untemps/solid-readtoron?style=for-the-badge)](https://www.npmjs.com/package/@untemps/solid-readtoron)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/untemps/solid-readtoron/deploy?style=for-the-badge)](https://github.com/untemps/solid-readtoron/actions)
-[![Codecov](https://img.shields.io/codecov/c/github/untemps/solid-readtoron?style=for-the-badge)](https://codecov.io/gh/untemps/solid-readtoron)
+[![npm](https://img.shields.io/npm/v/@untemps/solid-readotron?style=for-the-badge)](https://www.npmjs.com/package/@untemps/solid-readotron)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/untemps/solid-readotron/deploy?style=for-the-badge)](https://github.com/untemps/solid-readotron/actions)
+[![Codecov](https://img.shields.io/codecov/c/github/untemps/solid-readotron?style=for-the-badge)](https://codecov.io/gh/untemps/solid-readotron)
