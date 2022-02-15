@@ -1,6 +1,6 @@
 {
 	"name": "@untemps/solid-readotron",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"author": "Vincent Le Badezet <v.lebadezet@untemps.net>",
 	"license": "MIT",
 	"description": "Solid component to display an estimated reading time",
