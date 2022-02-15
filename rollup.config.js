@@ -22,6 +22,7 @@ export default {
 		babel({
 			exclude: 'node_modules/**',
 			babelHelpers: 'bundled',
+			presets: ['babel-preset-solid'],
 		}),
 		resolve(),
 		commonjs(),
