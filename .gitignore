@@ -1,25 +1,6 @@
-# Build
-.cache/
-dist/
-stats.html
+/node_modules/
+/public/build/
 
-# Dependencies
-node_modules/
+.DS_Store
 
-# Misc
-.DS_STORE
-
-# NPM
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-.yarn
-
-# Webstorm
 .idea/
-*.iml
-
-# Jest
-coverage/
-__snapshots__/
