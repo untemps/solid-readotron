@@ -2020,10 +2020,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@untemps/read-per-minute@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@untemps/read-per-minute/-/read-per-minute-1.0.1.tgz#f8a735fdab4a29612a18d303540391ce6ee3e79b"
-  integrity sha512-4b+Hh/2vwLzRnFdCNBAaj5gII0EUVCaPaUujaXCDvisGnWWel0kWCamQWYS7wi6p2Tv7A+AzwmkCa1yK3W5e/g==
+"@untemps/read-per-minute@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@untemps/read-per-minute/-/read-per-minute-1.0.3.tgz#bf81d7ac4f7f181ac6bc6e155724fa0ee1373c43"
+  integrity sha512-00RrqMrxqQknjCBdoX/8ZBD4oM9qezDC3CatW3DZiunUR9Jmf5jESjVbG4lFV3QNV2Vipb9FxaVkrB+Tp+Mntw==
 
 JSONStream@^1.0.4:
   version "1.3.5"
