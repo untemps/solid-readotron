@@ -299,10 +299,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@untemps/solid-readotron@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@untemps/solid-readotron/-/solid-readotron-1.0.1.tgz#a294d1c99d6b53e2a3d97b2e2001023388b84bdc"
-  integrity sha512-lLqCtoH35TIGA0eldeB4mYXS4lv+Y/UbIwsnxc1lLEqB+RusqYxD22kZHku9lxkmoDlrT8bEW8y4lQdFsN9UMw==
+"@untemps/solid-readotron@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@untemps/solid-readotron/-/solid-readotron-1.0.2.tgz#4858133db8890a8fa77ba4cffb25fb425f2522bc"
+  integrity sha512-iO6H7L6p9A+SKvB1G6zTUnviq3Un033tgvN2Vci+OblDpvlLB/gayhiJq/uVztWWzXz/o8qU3TOX1erDreu3pQ==
 
 ansi-styles@^3.2.1:
   version "3.2.1"
