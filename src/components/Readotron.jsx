@@ -4,7 +4,7 @@ import { ReadPerMinute } from '@untemps/read-per-minute'
 import interpolate from '../utils/interpolate'
 
 const Readotron = (props) => {
-	const p = mergeProps({ template: '%time% min read', lang: 'en' }, props)
+	const p = mergeProps({ template: '%time% min read', lang: 'default' }, props)
 
 	let observer = null
 	let parser = null
