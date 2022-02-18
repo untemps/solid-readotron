@@ -14,7 +14,7 @@ const App = () => {
 	return (
 		<main class={styles.root}>
 			<h1 class={styles.title}>Hipster Centric</h1>
-			<Readotron selector="#text" renderError={(err) => <span class={styles.error}>{err.toString()}</span>}>
+			<Readotron selector="#text">
 				{(time, words, error) => (
 					<div class={styles.infos}>
 						<span>By</span>

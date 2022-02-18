@@ -1,10 +1,10 @@
-import { children, createSignal, mergeProps, onCleanup, onError, onMount, Show } from 'solid-js'
+import { children, createSignal, mergeProps, onCleanup, onError, onMount, Match, Switch } from 'solid-js'
 import { ReadPerMinute } from '@untemps/read-per-minute'
 
 import interpolate from '../utils/interpolate'
 
 const Readotron = (props) => {
-	const p = mergeProps({ lang: 'en' }, props)
+	const p = mergeProps({ template: '%time% min read', lang: 'en' }, props)
 
 	let observer = null
 	let parser = null
@@ -45,18 +45,12 @@ const Readotron = (props) => {
 	})
 
 	return (
-		<Show when={!getError()} fallback={p.renderError(getError())}>
-			<Show
-				when={!!renderChildren()}
-				fallback={interpolate(
-					p.template || '%time% min read',
-					{ time: getValues()?.time, words: getValues()?.words },
-					'%'
-				)}
-			>
-				{renderChildren()(getValues()?.time, getValues()?.words, getError())}
-			</Show>
-		</Show>
+		<Switch template={<p>Oops</p>}>
+			<Match when={!!renderChildren()}>{p.children(getValues()?.time, getValues()?.words, getError())}</Match>
+			<Match when={!renderChildren() && !getError()}>
+				{interpolate(p.template, { time: getValues()?.time, words: getValues()?.words }, '%')}
+			</Match>
+		</Switch>
 	)
 }
 
