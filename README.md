@@ -11,7 +11,7 @@
 ## Demo
 
 <p align="center">
-    :red_circle:&nbsp;&nbsp;<big><a href="https://solid-readotron.vercel.app" target="_blank" rel="noopener">LIVE
+    :red_circle:&nbsp;<big><a href="https://solid-readotron.vercel.app" target="_blank" rel="noopener">LIVE
     DEMO</a></big>&nbsp;:red_circle:
     <br/><br/>
     <img src="assets/example.png" alt="Example" style="max-width: 100%"/>
@@ -37,9 +37,9 @@ yarn add @untemps/solid-readotron
 ### API
 
 | Props      | Type               | Default           | Description                                                                                                                                                     |
-| ---------- | ------------------ | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ---------- | ------------------ |-------------------| --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `selector` | string             | (required)        | Selector of the element which contains the content to parse. See [document.querySelector](https://developer.mozilla.org/fr/docs/Web/API/Document/querySelector) |
-| `lang`     | string             | 'en'              | Lang of the content [""ar', 'zh', 'nl', 'en', 'fi', 'fr', 'de', 'he', 'it', 'ko', 'es', 'sv']                                                                   |
+| `lang`     | string             | 'default'         | Lang of the content [""ar', 'zh', 'nl', 'en', 'fi', 'fr', 'de', 'he', 'it', 'ko', 'es', 'sv']                                                                   |
 | `template` | string or function | '%time% min read' | Display template which contains dynamic tokens to be replaced by the parsed values. See [Template](#template)                                                   |
 
 ### Selector
