@@ -37,10 +37,10 @@ yarn add @untemps/solid-readotron
 ### API
 
 | Props      | Type               | Default           | Description                                                                                                                                                     |
-| ---------- | ------------------ |-------------------| --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `selector` | string             | (required)        | Selector of the element which contains the content to parse. See [document.querySelector](https://developer.mozilla.org/fr/docs/Web/API/Document/querySelector) |
-| `lang`     | string             | 'default'         | Lang of the content [""ar', 'zh', 'nl', 'en', 'fi', 'fr', 'de', 'he', 'it', 'ko', 'es', 'sv']                                                                   |
-| `template` | string or function | '%time% min read' | Display template which contains dynamic tokens to be replaced by the parsed values. See [Template](#template)                                                   |
+| ---------- | ------------------ |-------------------| ----------------------------------------------------------------------------------------------------------------------- |
+| `selector` | string             | (required)        | Selector of the element which contains the content to parse. See [Selector](#selector)                                  |
+| `lang`     | string             | 'default'         | Lang of the content. See [Lang](#lang)                                                                                  |
+| `template` | string             | '%time% min read' | Display template which contains dynamic tokens to be replaced by the parsed values. See [Template](#template)           |
 
 ### Selector
 
