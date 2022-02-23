@@ -18,7 +18,7 @@ const App = () => {
 				{(time, words, error) => (
 					<div class={styles.infos}>
 						<span class={styles.prefix}>By</span>
-						<img class={styles.avatar} src={Avatar} alt="Tera Goow" />
+						<img class={styles.avatar} src={Avatar} alt="Tera Yepeeay" />
 						<span class={styles.name}>Tera Yepeeay</span>
 						<span class={styles.date}>Feb 26, 2022</span>
 						<Show when={!error} fallback={<span class={styles.error}>Oops</span>}>
