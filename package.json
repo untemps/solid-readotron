@@ -40,6 +40,7 @@
 		"solid-js": "^1.1.0"
 	},
 	"devDependencies": {
+		"@babel/plugin-transform-runtime": "^7.17.0",
 		"@commitlint/cli": "^16.2.1",
 		"@commitlint/config-conventional": "^16.2.1",
 		"@rollup/plugin-babel": "^5.3.0",
@@ -64,13 +65,7 @@
 		"solid-testing-library": "^0.2.1"
 	},
 	"jest": {
-		"transform": {
-			"^.+\\.js$": "babel-jest"
-		},
-		"moduleFileExtensions": [
-			"js",
-			"jsx"
-		],
+		"preset": "solid-jest/preset/browser",
 		"setupFilesAfterEnv": [
 			"<rootDir>/jest/jest.setup.js"
 		]

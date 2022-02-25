@@ -22,13 +22,13 @@ const Readotron = (props) => {
 		}
 
 		parser = new ReadPerMinute()
-		setValues(parser.parse(target?.innerText, p.lang))
+		setValues(parser.parse(target?.textContent, p.lang))
 
 		const config = { childList: true, characterData: true, subtree: true }
 		const onChange = (mutationsList) => {
 			for (let mutation of mutationsList) {
 				if (mutation.type === 'childList' || mutation.type === 'characterData') {
-					setValues(parser.parse(target?.innerText, p.lang))
+					setValues(parser.parse(target?.textContent, p.lang))
 				}
 			}
 		}
@@ -37,7 +37,7 @@ const Readotron = (props) => {
 	})
 
 	onCleanup(() => {
-		observer.disconnect()
+		observer?.disconnect()
 	})
 
 	onError((err) => {
@@ -45,7 +45,7 @@ const Readotron = (props) => {
 	})
 
 	return (
-		<Switch template={<p>Oops</p>}>
+		<Switch fallback={<p>Oops</p>}>
 			<Match when={!!renderChildren()}>{p.children(getValues()?.time, getValues()?.words, getError())}</Match>
 			<Match when={!renderChildren() && !getError()}>
 				{interpolate(p.template, { time: getValues()?.time, words: getValues()?.words }, '%')}
