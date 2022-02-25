@@ -3,28 +3,75 @@ import '@testing-library/jest-dom/extend-expect'
 
 expect.extend({ toBeInTheDocument, toHaveAttribute, toHaveStyle })
 
-global._createElement = (id = 'foo', parent, attrs) => {
-	const el = document.createElement('div')
-	el.setAttribute('id', id)
-	for (let key in attrs) {
-		el.setAttribute(key, attrs[key])
+const WORDS = [
+	'year',
+	'learn',
+	'key',
+	'cook',
+	'crosswalk',
+	'script',
+	'chief',
+	'plan',
+	'meat',
+	'vague',
+	'demonstrator',
+	'dictionary',
+	'visible',
+	'bomber',
+	'variation',
+	'leader',
+	'channel',
+	'litigation',
+	'royalty',
+	'impulse',
+	'package',
+	'oppose',
+	'privilege',
+	'begin',
+	'operation',
+	'herd',
+	'hemisphere',
+	'incongruous',
+	'horror',
+	'pipe',
+	'start',
+	'vertical',
+	'worry',
+	'reform',
+	'unlike',
+	'exhibition',
+	'disagree',
+	'allow',
+	'patrol',
+	'combine',
+	'impress',
+	'invisible',
+	'cage',
+	'log',
+	'snow',
+	'undertake',
+	'division',
+	'ethics',
+	'damage',
+	'responsible',
+]
+global.generateTokenizedText = (separator = '%', maxWordCount = 50, minWordCount = 10) => {
+	let str = ''
+	let int = ''
+	let tok = {}
+	const l = Math.ceil(Math.random() * (maxWordCount - minWordCount)) + minWordCount
+	for (let i = 0; i < l; i++) {
+		const r = Math.random() > 0.7
+		const w = WORDS[Math.floor(Math.random() * WORDS.length)]
+		str += `${i > 0 ? ' ' : ''}${r ? separator : ''}${w}${r ? separator : ''}`
+		if (r) {
+			tok[w] = 'gag'
+			int += `${i > 0 ? ' ' : ''}${r ? tok[w] : ''}`
+		} else {
+			int += `${i > 0 ? ' ' : ''}${r ? separator : ''}${w}${r ? separator : ''}`
+		}
 	}
-	;(parent || document.body).appendChild(el)
-	return el
-}
-
-global._removeElement = (selector) => {
-	const el = document.querySelector(selector)
-	if (!!el) {
-		el.parentNode.removeChild(el)
-	}
-}
-
-global._modifyElement = (selector, attributeName, attributeValue) => {
-	const el = document.querySelector(selector)
-	if (!!el) {
-		el.setAttribute(attributeName, attributeValue)
-	}
+	return { str, int, tok }
 }
 
 global._sleep = (ms = 100) => {
