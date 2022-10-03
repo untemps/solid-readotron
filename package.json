@@ -64,8 +64,14 @@
 		"solid-js": "^1.3.7",
 		"solid-testing-library": "^0.2.1"
 	},
+	"dependencies": {
+		"@untemps/utils": "^2.3.0"
+	},
 	"jest": {
 		"preset": "solid-jest/preset/browser",
+		"moduleNameMapper": {
+			"@untemps/utils/([^']*)": "<rootDir>/node_modules/@untemps/utils/dist/esm/$1.js"
+		},
 		"setupFilesAfterEnv": [
 			"<rootDir>/jest/jest.setup.js"
 		]

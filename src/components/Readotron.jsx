@@ -1,7 +1,6 @@
 import { children, createSignal, mergeProps, onCleanup, onError, onMount, Match, Switch } from 'solid-js'
 import { ReadPerMinute } from '@untemps/read-per-minute'
-
-import interpolate from '../utils/interpolate'
+import { interpolate } from '@untemps/utils/string/interpolate'
 
 const Readotron = (props) => {
 	const p = mergeProps({ template: '%time% min read', lang: 'default' }, props)
